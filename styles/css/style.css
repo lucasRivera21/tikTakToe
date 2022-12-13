@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+:root{
+    --blue: #30C3C0;
+    --orange: #F3B138;
+    --gray: #A8BEC9;
+    --black: #1F3540;
+    --background-black: #192A32;
+}
+
+body{
+    background-color: var(--background-black);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*START*/
+.start{
+    width: 350px;
+    height: auto;
+}
+
+    /*SYMBOLS*/
+    .symbol{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+        .symbol .fa-xmark{
+            color: var(--blue);
+            font-size: 30px;
+        }
+        .symbol .fa-o{
+            color: var(--orange);
+            font-size: 28px;
+        }
+
+    /*SELECT SYMBOL*/
+    .select-symbol{
+        background-color: var(--black);
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 6px 0 #102129;
+    }
+        .select-symbol .text-pick{
+            color: var(--gray);
+            font-size: 12px;
+            font-weight: 900;
+            margin: 8px auto 18px;
+        }
+        
+        .pick-symbol{
+            background-color: var(--background-black);
+            border-radius: 5px;
+            padding: 5px;
+            position: relative; 
+            margin-bottom: 10px;
+        }
+            #btn-color{
+                right: 5px;
+                top: 5px;
+                position: absolute;
+                width: 160px;
+                height: 41px;
+                background-color: var(--gray);
+                border-radius: 5px;
+                transition: 1s;
+            }
+
+            .pick-symbol button{
+                padding: 0px 67px;
+                border-radius: 5px;
+                border: 0px;
+                font-size: 30px;
+                background-color: transparent;
+                cursor:pointer;
+                position: relative;
+            }
+                .pick-symbol button .fa-xmark{
+                    color: var(--gray);
+                }
+                .pick-symbol button .fa-o{
+                    color: var(--background-black);
+                }
+
+        .remember{
+            color: var(--gray);
+            margin: 17px auto 7px;
+            font-size: 12px;
+            font-weight: 900;
+            opacity: 0.5;
+        }
+
+    .buttons{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+        .buttons button{
+            border: 0;
+            border-radius: 10px;
+            height: 45px;
+            font-weight: 900;
+            font-size: 16px;   
+            cursor: pointer;
+        }
+        .vs-cpu{
+            background-color: var(--orange);
+            margin-bottom: 25px;
+            box-shadow: 0 6px 0 #CA8B14;
+        }
+        .vs-player{
+            background-color: var(--blue);
+            box-shadow: 0 6px 0 #118C86;
+        }
+        .buttons button p{
+            opacity: 0.73;
+        }
+
+.transition-btn-left{
+    animation-name: transition-btn-left;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes transition-btn-left {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.transition-btn-right{
+    animation-name: transition-btn-rigth;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes transition-btn-rigth {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
