@@ -7,24 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/48351f586e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles/css/style.css">
+    <link rel="stylesheet" href="/styles/css/play.css">
     <title>Tik Tak Toe!!!</title>
 </head>
 <body>
     <div class="container">
         <!--START GAME-->
-        <section class="start">
-            <div class="symbol"><i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-o"></i></div>
+        <section class="start enable">
 
-            <div class="select-symbol">
-                <p class="text-pick">PICK PLAYER 1'S MARK</p>
+            <div class="symbol-and-select">
+                <div class="symbol"><i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-o"></i></div>
 
-                <div class="pick-symbol">
-                    <div id="btn-color" ></div>
-                    <button class="btn-x"><i class="fa-solid fa-xmark" id="symbolX"></i></button>
-                    <button class="btn-o"><i class="fa-solid fa-o" id="symbolO"></i></button>
+                <div class="select-symbol transition-start">
+                    <p class="text-pick">PICK PLAYER 1'S MARK</p>
+
+                    <div class="pick-symbol">
+                        <div id="btn-color" ></div>
+                        <button class="btn-x"><i class="fa-solid fa-xmark" id="symbolX"></i></button>
+                        <button class="btn-o"><i class="fa-solid fa-o" id="symbolO"></i></button>
+                    </div>
+                    
+                    <p class="remember">REMEMBER: X GOES FIRST</p>
                 </div>
-                
-                <p class="remember">REMEMBER: X GOES FIRST</p>
             </div>
 
             <div class="buttons">
@@ -32,10 +36,38 @@
                 <button class="player vs-player"><p class="player">NEW GAME (VS PLAYER)</p></button>
             </div>
         </section>
+
+        <!--PLAY-->
+        <section class="play">
+            <div class="top">
+                <div class="symbol"><i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-o"></i></div>
+                <div class="turn"><i class="fa-solid fa-xmark"></i> <p>TURN</p></div>
+                <button class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+
+            <div class="middle">
+                <div class="1"></div>
+                <div class="2"></div>
+                <div class="3"></div>
+                <div class="4"></div>
+                <div class="5"></div>
+                <div class="6"></div>
+                <div class="7"></div>
+                <div class="8"></div>
+                <div class="9"></div>
+            </div>
+
+            <div class="bot">
+                <div class="score-x"><p>X</p><strong>0</strong></div>
+                <div class="ties"><p>TIES</p><strong>0</strong></div>
+                <div class="score-o"><p>O</p><strong>0</strong></div>
+            </div>
+        </section>
+
     </div>
     
 
-<script src="/styles/js/main.js"></script>
+<script type="module" src="/styles/js/main.js"></script>
 <script type="module" src="/styles/js/start.js" ></script>
 </body>
 </html>

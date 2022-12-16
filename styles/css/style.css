@@ -100,7 +100,8 @@ body{
             font-weight: 900;
             opacity: 0.5;
         }
-
+    
+    /*BUTTONS*/
     .buttons{
         display: grid;
         grid-template-columns: auto;
@@ -110,6 +111,7 @@ body{
             border: 0;
             border-radius: 10px;
             height: 45px;
+            width: 350px;
             font-weight: 900;
             font-size: 16px;   
             cursor: pointer;
@@ -132,6 +134,9 @@ body{
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
+.enable{
+    display: none;
+}
 @keyframes transition-btn-left {
     from{
         transform: translateX(0);
@@ -152,6 +157,51 @@ body{
     }
     to{
         transform: translateX(0);
+    }
+}
+
+.transition-up{
+    animation-name: transition-up;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transition-up {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-2000%);
+    }
+}
+
+.transition-right{
+    animation-name: transition-right;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transition-right {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(2000%);
+    }
+}
+
+.transition-left{
+    animation-name: transition-left;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transition-left {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-2000%);
     }
 }
 

@@ -8,7 +8,7 @@ const symbolO = document.getElementById('symbolO');
 
 const btnAnimate = document.getElementById('btn-color');
 
-var symbol = true;
+var symbol = "o";
 
 btnX.addEventListener('click', (e) =>{
     btnAnimate.classList.remove('transition-btn-right');
@@ -17,7 +17,7 @@ btnX.addEventListener('click', (e) =>{
     symbolO.style.color = "var(--gray)";
     symbolX.style.color = "var(--background-black)";
 
-    symbol = false;
+    symbol = "x";
 });
 
 btnO.addEventListener('click', (e) => {
@@ -27,13 +27,13 @@ btnO.addEventListener('click', (e) => {
     symbolO.style.color = "var(--background-black)";
     symbolX.style.color = "var(--gray)";
 
-    symbol = true;
+    symbol = "o";
 });
 
 const buttons = document.querySelector('.buttons');
 buttons.addEventListener('click', (e) => {
     if(e.target && (e.target.tagName === 'P' || e.target.tagName === 'BUTTON')){
-        e.target.classList[0] === 'cpu' ? cpu() : player();
         localStorage.setItem('selected', symbol);
+        e.target.classList[0] === 'cpu' ? cpu() : player();
     }
 });
