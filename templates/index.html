@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <!--START GAME-->
-        <section class="start enable">
+        <section class="start">
 
             <div class="symbol-and-select">
                 <div class="symbol"><i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-o"></i></div>
@@ -38,7 +38,7 @@
         </section>
 
         <!--PLAY-->
-        <section class="play">
+        <section class="play enable">
             <div class="top">
                 <div class="symbol"><i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-o"></i></div>
                 <div class="turn"><i class="fa-solid fa-xmark"></i> <p>TURN</p></div>
@@ -46,21 +46,32 @@
             </div>
 
             <div class="middle">
-                <div class="1"></div>
-                <div class="2"></div>
-                <div class="3"></div>
-                <div class="4"></div>
-                <div class="5"></div>
-                <div class="6"></div>
-                <div class="7"></div>
-                <div class="8"></div>
-                <div class="9"></div>
+                <button class="btn-1"></button>
+                <button class="btn-2"></button>
+                <button class="btn-3"></button>
+                <button class="btn-4"></button>
+                <button class="btn-5"></button>
+                <button class="btn-6"></button>
+                <button class="btn-7"></button>
+                <button class="btn-8"></button>
+                <button class="btn-9"></button>
             </div>
 
             <div class="bot">
-                <div class="score-x"><p>X</p><strong>0</strong></div>
-                <div class="ties"><p>TIES</p><strong>0</strong></div>
-                <div class="score-o"><p>O</p><strong>0</strong></div>
+                <div class="score-x">
+                    <div class="person">
+                        <p>X</p><p class="player-1">(YOU)</p>
+                    </div>
+                    <strong id="score-p1">0</strong>
+                </div>
+                <div class="ties"><p>TIES</p><strong id="score-ties">0</strong></div>
+                <div class="score-o">
+                    <div class="person">
+                        <p>O</p><p class="player-2">(CPU)</p>
+                    </div>
+                    <strong id="score-p2">0</strong>
+
+                </div>
             </div>
         </section>
 

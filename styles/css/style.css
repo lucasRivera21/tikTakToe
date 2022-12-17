@@ -162,7 +162,7 @@ body{
 
 .transition-up{
     animation-name: transition-up;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 
@@ -177,7 +177,7 @@ body{
 
 .transition-right{
     animation-name: transition-right;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 
@@ -192,7 +192,7 @@ body{
 
 .transition-left{
     animation-name: transition-left;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 

@@ -6,7 +6,7 @@
     --background-black: #192A32;
 }
 .play{
-    width: 450px;
+    width: 380px;
 }
 .top{
     display: flex;
@@ -52,8 +52,68 @@
         }
 
 .middle{
-    background-color: yellow;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
 }
+    .middle button{
+        width: 110px;
+        height: 110px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        background-color: var(--black);
+        border: 0;
+        box-shadow: 0 5px 0 #102129;
+        border-radius: 5px;
+    }
 .bot{
-    background-color: green;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}   
+    .bot div{
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px 0;
+        width: 110px;
+    }
+        .bot div p{
+            font-size: 13px;
+        }
+        .bot div strong{
+            font-size: 24px;
+        }
+        .bot div .person{
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+            .bot div .person p{
+                margin: 0 2px;
+            }
+    .bot .score-x{
+        background-color: var(--blue);
+        
+    }
+    .bot .ties{
+        background-color: var(--gray);
+    }
+    .bot .score-o{
+        background-color: var(--orange);
+    }
+
+
+/*RESPONSIVE*/
+@media (max-width: 420px){
+    .play{
+        width: 270px;
+    }
+    .middle button{
+        width: 78px;
+        height: 78px;
+        margin-bottom: 18px;
+    }
+    .bot div{
+        width: 78px;
+    }
 }
