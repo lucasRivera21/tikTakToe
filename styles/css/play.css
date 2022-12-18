@@ -66,6 +66,16 @@
         box-shadow: 0 5px 0 #102129;
         border-radius: 5px;
     }
+        .middle button i{
+            font-size: 80px;
+        }
+        .middle button .fa-xmark{
+            color: var(--blue);
+        }
+        .middle button .fa-o{
+            color: var(--orange);
+        }
+
 .bot{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -102,6 +112,70 @@
         background-color: var(--orange);
     }
 
+.animation-top{
+    animation-name: animation-top;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation-top {
+    from{
+        transform: translateY(-2000%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.animation-middle{
+    animation-name: animation-middle;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation-middle {
+    from{
+        transform: translateX(2000%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.animation-bot{
+    animation-name: animation-bot;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation-bot {
+    from{
+        transform: translateX(-2000%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.winner-animation{
+    animation-name: winner-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes winner-animation {
+    0%{
+        transform: scale(1);
+        color: var(--black);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+        color: var(--black);
+    }
+}
 
 /*RESPONSIVE*/
 @media (max-width: 420px){

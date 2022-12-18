@@ -33,7 +33,6 @@ btnO.addEventListener('click', (e) => {
 const buttons = document.querySelector('.buttons');
 buttons.addEventListener('click', (e) => {
     if(e.target && (e.target.tagName === 'P' || e.target.tagName === 'BUTTON')){
-        localStorage.setItem('selected', symbol);
-        e.target.classList[0] === 'cpu' ? cpu() : player();
+        e.target.classList[0] === 'cpu' ? cpu(symbol) : player();
     }
 });
